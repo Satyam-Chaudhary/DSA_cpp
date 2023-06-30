@@ -399,8 +399,107 @@ void pattern18(int n)
     }
 }
 
-void pattern19(int n){
-    
+void pattern19(int n)
+{
+    // upper pattern
+    for (int i = 1; i <= n; i++)
+    {
+        // star1
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int k = 1; k <= 2 * i - 2; k++)
+        {
+            cout << " ";
+        }
+        // star2
+        for (int z = 1; z <= n - i + 1; z++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    // lower pattern
+    for (int i = 1; i <= n; i++)
+    {
+        // star1
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int k = 1; k <= 2 * (n - i); k++)
+        {
+            cout << " ";
+        }
+        // star2
+        for (int z = 1; z <= i; z++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void pattern20(int n)
+{
+    for (int i = 1; i < 2 * n; i++)
+    {
+        // left side star pattern
+        int stars = i;
+        if (i > n)
+            stars = 2 * n - i;
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+
+        // space
+        int space = 2 * (n - i);
+        if (i > n)
+            space = 2 * (i - n);
+        for (int j = 1; j <= space; j++)
+        {
+            cout << " ";
+        }
+
+        // right side pattern
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void pattern21(int n)
+{
+
+    for (int i = 1; i < 2 * n; i++)
+    {
+
+        for (int j = 1; j <= n; j++)
+        {
+            // for printing stars
+            if (i == 1 || i == 2 * n - 1)
+                cout << "*";
+            // for printing middle stars
+            else if (i % 2 != 0 && j == 1 || i % 2 != 0 && j == n)
+                cout << "*";
+            // for printing spaces
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern22(int n){
+     for(int i = 1 ; i < 2*n ; i++){
+        
+     }
 }
 
 int main()
@@ -428,6 +527,9 @@ int main()
     // pattern16_right(n);
     // pattern17(n);
     // pattern18(n);
-    pattern19(n);
+    // pattern19(n);
+    // pattern20(n);
+    // pattern21(n);
+    pattern22(n);
     return 0;
 }
