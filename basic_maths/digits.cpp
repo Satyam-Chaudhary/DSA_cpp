@@ -103,8 +103,8 @@ void print_all_divisor(int n)
 void prime_number(int n)
 {
     int c = 0; // count variable
-    int sqrtn = sqrt(n);
-    for (int i = 1; i <= sqrtn; i++) // can write like this to not call sqrt. function everytime
+    // int sqrtn = sqrt(n);
+    for (int i = 1; i*i <= n; i++) // can write like this to not call sqrt. function everytime
     {
         if (n % i == 0)
         {
@@ -169,21 +169,21 @@ void find_GCD_euclideon_algo(int x, int y)
 
 int main()
 {
-    // int n;
-    // cin >> n;
+    int n;
+    cin >> n;
 
     // extraction_of_digit(n);
     // cout << reverse_number(n) << endl;
     // cout << palindrome(n) << endl;
     // cout << armstrongNumber(n) << endl;
     // print_all_divisor(n);
-    // prime_number(n);
+    prime_number(n);
 
-    int x, y;
-    cin >> x >> y;
+    // int x, y;
+    // cin >> x >> y;
 
-    // find_GCD_brute_force(x, y);
-    find_GCD_euclideon_algo(x, y);
+    // // find_GCD_brute_force(x, y);
+    // find_GCD_euclideon_algo(x, y);
 
     return 0;
 }

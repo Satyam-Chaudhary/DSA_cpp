@@ -40,7 +40,7 @@ void explainPair()
 // vectors --> dynamic arrays
 void explainVectors()
 {
-    // container ; dynamic in nature i.e modify the size of the vector
+    // container : dynamic in nature i.e modify the size of the vector
 
     vector<int> v;
     v.push_back(1);
@@ -98,7 +98,7 @@ void explainVectors()
     //or --> using for each loop
     //FOR EACH LOOP
     for(auto it : v5){
-        cout << it << " "; //doesn't require * atr it
+        cout << it << " "; //doesn't require * at it
     }
     cout << endl;
 
